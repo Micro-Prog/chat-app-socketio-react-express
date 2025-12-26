@@ -1,1 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&family=Outfit:wght@100..900&family=Vazirmatn:wght@100..900&display=swap');
+
 @import "tailwindcss";
+
+
+
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
