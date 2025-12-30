@@ -8,7 +8,7 @@ import RegisterPage from "./pages/register/RegisterPage"
 
 export default function App() {
   return (
-    <div className="bg-[url('./src/assets/bgImage.svg')] bg-contain">
+    <div className="bg-main bg-contain">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />

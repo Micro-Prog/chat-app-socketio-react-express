@@ -3,6 +3,29 @@
 @import "tailwindcss";
 
 
+@theme {
+  /* Primary brand colors */
+  --color-primary: #8185b2;
+  --color-primary-light: #a9a9f0;
+  
+  /* Background colors */
+  --color-bgColor-dark: #282142;
+  --color-bgColor-overlay: rgb(129 133 178 / 0.1);
+  --color-bgColor-badge: #715bff;
+
+  /* Border colors */
+  --color-borderColor-main: #a855f7;
+  --color-borderColor-secondary: #4b5563;
+  --color-borderColor-tertiary: #79716b;
+
+
+
+  --color-textColor-offline: #a1a1a1;
+  --color-textColor-online: #05df72;
+
+  /* Background image */
+  --background-image-main: url('./src/assets/bgImage.svg');
+}
 
 
 * {
