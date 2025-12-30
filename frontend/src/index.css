@@ -11,14 +11,27 @@
   /* Background colors */
   --color-bgColor-dark: #282142;
   --color-bgColor-overlay: rgb(129 133 178 / 0.1);
+  --color-bgColor-message: #8B5CF6;
+
+  --color-bgColor-messageType: #f3f4f6;
+
+  --color-bgColor-bio: #b185b2;
+
+   
+
   --color-bgColor-badge: #715bff;
+
 
   /* Border colors */
   --color-borderColor-main: #a855f7;
   --color-borderColor-secondary: #4b5563;
   --color-borderColor-tertiary: #79716b;
 
+ 
 
+  --color-textColor-dateOne: #6a7282;
+
+  --color-textColor-placeholder: #99a1af ;
 
   --color-textColor-offline: #a1a1a1;
   --color-textColor-online: #05df72;
