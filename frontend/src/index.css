@@ -13,12 +13,14 @@
   --color-bgColor-overlay: rgb(129 133 178 / 0.1);
   --color-bgColor-message: #8B5CF6;
 
+  /* Message type colors */
   --color-bgColor-messageType: #f3f4f6;
 
+  /* Bio colors */
   --color-bgColor-bio: #b185b2;
 
-   
 
+  /* Badge colors */
   --color-bgColor-badge: #715bff;
 
 
@@ -26,15 +28,41 @@
   --color-borderColor-main: #a855f7;
   --color-borderColor-secondary: #4b5563;
   --color-borderColor-tertiary: #79716b;
+  --color-borderColor-quaternary: #374151;
 
- 
 
+
+  --color-textColor-secondary: #6a7282;
+
+  --color-textColor-tertiary: #d1d5dc;
+
+
+  /* Date colors */
   --color-textColor-dateOne: #6a7282;
+  --color-textColor-dateTwo: #4b5563;
 
+  /* Placeholder colors */
   --color-textColor-placeholder: #99a1af ;
 
+
+  /* Offline/Online colors */
   --color-textColor-offline: #a1a1a1;
   --color-textColor-online: #05df72;
+
+  --color-formColor-border: #6a7282;
+  --color-formColor-bg: #1f2937;
+  --color-formColor-text: #e5e7eb;
+
+  --color-formColor-signInsignUp: #006aff;
+
+  --color-formColor-ringFocus: #6366F1;
+
+  /* Gradient colors */
+  --gradient-primary: linear-gradient(
+    90deg,
+    #C27AFF 0%,
+    #7F22FE 100%
+  );
 
   /* Background image */
   --background-image-main: url('./src/assets/bgImage.svg');
@@ -48,3 +76,4 @@
 ::-webkit-scrollbar {
     display: none;
 }
+

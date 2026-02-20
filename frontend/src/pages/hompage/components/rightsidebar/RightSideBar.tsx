@@ -1,7 +1,7 @@
 import assets, { imagesDummyData } from '@/lib/assets/assets';
 import type { SideBarProps } from '@/lib/types/sidebar/sidebar';
 import React from 'react'
-
+import './index.css'
 
 
 const RightSideBar:React.FC<SideBarProps> = ({ 
@@ -35,6 +35,12 @@ const RightSideBar:React.FC<SideBarProps> = ({
           ))}
         </div>
       </div>
+
+      <button className='absolute bottom-5 left-1/2 transform -translate-x-1/2
+      bg-gradient-to-r bg-gradient-primary text-white border-none
+      text-sm font-light py-2 px-20 rounded-full cursor-pointer'>
+          Logout
+      </button>
 
 
     </div>

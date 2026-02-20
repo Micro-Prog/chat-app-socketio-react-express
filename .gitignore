@@ -10,3 +10,6 @@ backend/.env
 frontend/dist
 frontend/build
 backend/dist
+
+frontend/docs
+backend/docs
