@@ -1,18 +1,12 @@
 // Server.js
 import "dotenv/config";
-import express from "express";
-import cors from "cors";
 import http from "http";
+import app from './src/app.js'
+import connectDB from "./src/config/db/db.js";
 
-const app = express()
+await connectDB();
 
-
-app.use(express.json({limit: "4mb"}));
-app.use(cors());
-
-app.use("/api/status", (req, res) => res.send("good"))
-
-const server = http.createServer(app)
+const server = http.createServer(app);
 
 server.listen(3000, () => {
   console.log("Server running on 3000 ...")
