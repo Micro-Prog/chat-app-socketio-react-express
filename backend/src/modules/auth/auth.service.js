@@ -1,12 +1,15 @@
 import bcrypt from 'bcrypt';
 import User from '../user/user.model.js';
+import {uploadToCloudinary} from '../../config/cloudinary/cloudinary.js';
 
-const signUp = async ( { name, email, password, bio } ) => {
+
+const signUp = async ( { fullName, name, email, password, bio } ) => {
+    const displayName = fullName || name;
 
     try {
 
-        if (!name || !email || !password || !bio) {
-            return res.status(400).json({ message: 'Name, email, bio and password are required' });
+        if (!displayName || !email || !password || !bio) {
+            throw new Error('Full name (or name), email, bio and password are required');
         }
 
         const existingUser = await User.findOne( { email } );
@@ -17,7 +20,7 @@ const signUp = async ( { name, email, password, bio } ) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        const user = await User.create({ name, email, password: hashedPassword, bio });
+        const user = await User.create({ fullName: displayName, email, password: hashedPassword, bio });
 
         return user;
 
@@ -54,14 +57,5 @@ const login = async ( { email, password } ) => {
 
 }
 
-const checkAuth = (req, res ) => {
-    res.json({
-        success: true,
-        state: "ok",
-        message: 'Authenticated',
-        user: req.user
-    })
-}
 
-
-export { signUp, login, checkAuth }
+export { signUp, login }

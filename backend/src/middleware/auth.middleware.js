@@ -1,8 +1,8 @@
-import User from "../modules/user/user.model";
+import User from "../modules/user/user.model.js";
 import jwt from 'jsonwebtoken';
 
 
-export const protectRoute = async (req, res, next) => {
+const protectRoute = async (req, res, next) => {
     try {
         const authHeader = req.headers.authorization;
 
@@ -31,3 +31,5 @@ export const protectRoute = async (req, res, next) => {
         res.status(401).json({ message: 'Unauthorized' });
     }
 }
+
+export default protectRoute;

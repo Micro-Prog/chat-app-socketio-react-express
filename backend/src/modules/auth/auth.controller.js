@@ -3,14 +3,11 @@ import { generateToken } from '../../utils/utils.js';
 
 // Controller for user registration
 const signUpController = async (req, res) => {
-        const { name, email, password, bio } = req.body;
+        const { fullName, name, email, password, bio } = req.body;
 
     try {
 
-
-
-
-        const user = await signUp({ name, email, password, bio });
+        const user = await signUp({ fullName, name, email, password, bio });
 
         const token = generateToken(user._id);
 
@@ -19,7 +16,7 @@ const signUpController = async (req, res) => {
             success: true,
             state: "ok",
             message: 'User registered successfully',
-            user: { id: user._id, name: user.name, email: user.email, bio: user.bio },
+            user: { id: user._id, fullName: user.fullName, email: user.email, bio: user.bio },
             token
         })
     } catch (error) {
@@ -44,7 +41,7 @@ const loginController = async (req, res) => {
             success: true,
             state: "ok",
             message: 'User logged in successfully',
-            user: { id: user._id, name: user.name, email: user.email, bio: user.bio },
+            user: { id: user._id, fullName: user.fullName, email: user.email, bio: user.bio },
             token
         })
 
@@ -53,6 +50,14 @@ const loginController = async (req, res) => {
 }
 }
 
+const checkAuth = (req, res) => {
+    res.json({
+        success: true,
+        message: 'Authenticated',
+        user: req.user
+    });
+}
 
 
-export { signUpController, loginController }
+
+export { signUpController, loginController, checkAuth }
